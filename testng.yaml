@@ -1,0 +1,16 @@
+name: Suite
+parallel: tests
+configFailurePolicy: skip
+tests:
+  - name: Test
+  parallel: tests
+  parameters: { browserName: Chrome }
+  classes:
+    - testNg.Parallel
+
+  - name: Test
+  parallel: tests
+  parameters: { browserName: fireFox }
+  classes:
+    - testNg.Parallel
+
